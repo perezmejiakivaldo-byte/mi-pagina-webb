@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi página web - CETAC 22</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* COLORES NEGRO, AZUL Y MORADO */
+        body{ background:#0a0a12; color:#e6ff; font-family:Arial,sans-serif; margin:0; display:grid; grid-template-areas:"header header" "main aside" "footer footer"; grid-template-columns:3fr 1fr; }
+        header{ grid-area:header; background: linear-gradient(90deg, #000000, #0ea5e9, #7c3aed); color:white; padding:1rem; display:flex; flex-wrap:wrap; gap:1rem; align-items:center; justify-content:space-between; border-bottom:3px solid #7c3aed; }
+        nav a{ color:white; margin-right:8px; text-decoration:none; font-weight:bold; background:rgba(0,0,0,0.4); padding:6px 12px; border-radius:20px; border:1px solid #0ea5e9; }
+        nav a:hover{ background:#7c3aed; }
+        main{ grid-area:main; padding:1rem; }
+        aside{ grid-area:aside; background:#1a1a2e; color:#c4b5fd; padding:1rem; margin:1rem; border-radius:12px; border:1px solid #0ea5e9; box-shadow:0 0 15px rgba(124,58,237,0.3); }
+        footer{ grid-area:footer; background:#000; color:#a78bfa; text-align:center; padding:1rem; border-top:2px solid #0ea5e9; }
+        section{ background:#151525; padding:1rem; margin-bottom:1rem; border-radius:12px; border:1px solid #2a2a4a; border-left:4px solid #0ea5e9; }
+        section:nth-child(2){ border-left-color:#7c3aed; }
+        section:nth-child(3){ border-left-color:#0ea5e9; }
+        section:nth-child(4){ border-left-color:#7c3aed; }
+        h2{ color:#0ea5e9; } h3{ color:#a78bfa; }
+        table{ width:100%; border-collapse:collapse; }
+        th,td{ border:1px solid #2a2a4a; padding:8px; }
+        th{ background: linear-gradient(90deg, #0ea5e9, #7c3aed); color:white; }
+        td{ background:#1e1e32; color:white; }
+        caption{ color:#a78bfa; font-weight:bold; margin-bottom:5px; }
+        mark{ background:#7c3aed; color:white; padding:2px 5px; border-radius:4px; }
+        blockquote{ border-left:4px solid #7c3aed; padding-left:10px; color:#a78bfa; }
+        input,select,textarea{ background:#0a0a12; color:white; border:1px solid #0ea5e9; padding:8px; border-radius:8px; width:100%; }
+        button{ background: linear-gradient(90deg, #0ea5e9, #7c3aed); color:white; padding:10px 18px; border:none; border-radius:8px; font-weight:bold; cursor:pointer; }
+        button:hover{ opacity:0.8; box-shadow:0 0 10px #7c3aed; }
+        figcaption{ color:#a78bfa; font-weight:bold; }
+        @media(max-width:768px){ body{ grid-template-areas:"header" "main" "aside" "footer"; grid-template-columns:1fr } }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mi página web </h1>
+        <nav>
+            <a href="#texto">Texto</a>
+            <a href="#listas">Listas</a>
+            <a href="#tabla">Tabla</a>
+            <a href="#multimedia">Multimedia</a>
+            <a href="#formulario">Formulario</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+        <button id="btn-tema">Cambiar tema</button>
+        <p id="saludo"></p>
+    </header>
+
+    <main>
+        <section id="texto">
+            <h2>Elementos de texto</h2>
+            <p>Esta es mi primera página web para la práctica de <strong>GitHub y GitHub Pages</strong>. Aquí aplico <em>HTML, CSS y JavaScript</em>.</p>
+            <p>Texto con <b>negrita</b>, <i>cursiva</i> y <mark>texto resaltado</mark>.</p>
+            <blockquote>Cita destacada: "Aprender a programar es aprender a crear el futuro".</blockquote>
+            <hr>
+            <p>Salto de línea abajo:<br>Esta es otra línea.</p>
+            <a href="https://developer.mozilla.org/es/" target="_blank" style="color:#38bdf8;">Enlace externo a MDN</a>
+        </section>
+
+        <section id="listas">
+            <h2>Listas</h2>
+            <h3>Lista con viñetas</h3>
+            <ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            <h3>Lista numerada</h3>
+            <ol><li>Crear repositorio</li><li>Escribir código</li><li>Publicar</li></ol>
+            <h3>Lista de definiciones</h3>
+            <dl>
+                <dt>HTML</dt><dd>Lenguaje para estructura de páginas.</dd>
+                <dt>CSS</dt><dd>Lenguaje para estilos y diseño.</dd>
+                <dt>GitHub Pages</dt><dd>Servicio para publicar páginas gratis.</dd>
+            </dl>
+        </section>
+
+        <section id="tabla">
+            <h2>Tabla</h2>
+            <table>
+                <caption>Tecnologías Web</caption>
+                <thead><tr><th>Tecnología</th><th>Función</th><th>Año</th></tr></thead>
+                <tbody>
+                    <tr><td>HTML</td><td>Estructura</td><td>1993</td></tr>
+                    <tr><td>CSS</td><td>Diseño</td><td>1996</td></tr>
+                    <tr><td>JavaScript</td><td>Interactividad</td><td>1995</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="multimedia">
+            <h2>Multimedia</h2>
+            <figure>
+                <img src="https://images.unsplash.com/photo-1534972195531-b367a407dcc8" alt="Galaxia negro azul morado" style="width:100%; border-radius:12px; border:2px solid #0ea5e9; box-shadow:0 0 20px rgba(124,58,237,0.4);">
+                <figcaption>Pie de foto: Galaxia negro, azul y morado - CETAC 22 🖤💙💜</figcaption>
+            </figure>
+            <h3>Video de YouTube</h3>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video de ejemplo" frameborder="0" allowfullscreen style="border-radius:12px; border:2px solid #7c3aed;"></iframe>
+        </section>
+
+        <section id="formulario">
+            <h2>Formulario</h2>
+            <form id="miFormulario">
+                <label>Nombre: <input type="text" required></label>
+                <label>Correo: <input type="email" required></label>
+                <label>Número: <input type="number"></label>
+                <label>País: <select><option>México</option><option>Guatemala</option><option>Otro</option></select></label>
+                <label>Género: <input type="radio" name="genero"> Hombre <input type="radio" name="genero"> Mujer</label>
+                <label><input type="checkbox"> Acepto términos</label>
+                <label>Mensaje: <textarea></textarea></label>
+                <label>Fecha: <input type="date"></label>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <aside>
+        <h3>Barra lateral</h3>
+        <p>Contenido relacionado a CETAC 22.</p>
+        <details><summary>Desplegable - Ver más contenido</summary><p>Este es el elemento desplegable que pide la práctica.</p></details>
+    </aside>
+
+    <footer><p>&copy; 2026 Tu Nombre. Hecho con HTML, CSS y JavaScript - CETAC 22 </p></footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
